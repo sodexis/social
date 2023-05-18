@@ -40,6 +40,7 @@ class ResUsers(models.Model):
                 module = self.env[activity["model"]]._original_module
                 icon = module and modules.module.get_module_icon(module)
                 user_activities[activity["model"]] = {
+                    "id": activity["id"],
                     "name": model_names[activity["id"]],
                     "model": activity["model"],
                     "icon": icon,
